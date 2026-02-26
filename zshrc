@@ -173,7 +173,7 @@ alias vs='open -a "Visual Studio Code" "$1"'
 alias sz='source ~/.zshrc'
 alias zcheck='shellcheck --shell=bash' # For shellchecking zsh scripts
 
-function fz() { $2 $($1 | fzf) }
+function fz() { $2 $($1 | fzf); }
 
 # Get the list of commits that are about to be put in a PR so we can easily add a
 # commit-by-commit PR description
