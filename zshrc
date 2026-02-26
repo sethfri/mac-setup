@@ -17,8 +17,8 @@ path=(
 )
 
 # Projects
-alias ms="$HOME/Developer/mac-setup"
-alias pmp="$HOME/Developer/private-mac-preferences"
+alias ms='$HOME/Developer/mac-setup'
+alias pmp='$HOME/Developer/private-mac-preferences'
 
 # Git
 alias gmt='git mergetool'
