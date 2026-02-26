@@ -171,6 +171,7 @@ alias dorig='find . -iname \*.orig -delete'
 alias ddd="rm -rf $HOME/Library/Developer/Xcode/DerivedData"
 alias vs='open -a "Visual Studio Code" "$1"'
 alias sz='source ~/.zshrc'
+alias zcheck='shellcheck --shell=bash' # For shellchecking zsh scripts
 
 function fz() { $2 $($1 | fzf) }
 
