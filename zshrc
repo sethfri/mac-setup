@@ -165,6 +165,11 @@ alias gb='./gradlew build'
 alias opus='claude --model opus'
 alias sonnet='claude --model sonnet'
 
+function cr() {
+  local resume=$(osascript -e 'tell application "iTerm2" to tell current session of current window to get contents' | rg -o 'claude --resume [a-f0-9-]+' | tail -1)
+  eval "$resume"
+}
+
 # Helpers
 alias symbolicate="/Applications/Xcode.app/Contents/SharedFrameworks/DVTFoundation.framework/Versions/A/Resources/symbolicatecrash -v"
 alias dorig='find . -iname \*.orig -delete'
