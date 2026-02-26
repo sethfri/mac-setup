@@ -214,6 +214,7 @@ autoload -U bashcompinit && bashcompinit
 # Source Private Zsh
 
 source "$HOME/Developer/private-mac-preferences/square-zshrc"
+source "$HOME/Developer/private-mac-preferences/personal-proj-zshrc"
 
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
