@@ -2,7 +2,6 @@
 # Path
 
 path=(
-  "$HOME/.rvm/gems/ruby-2.7.4/bin"
   "/usr/local/bin"
   "/usr/local/sbin"
   "/opt/homebrew/bin"
@@ -217,26 +216,4 @@ autoload -U bashcompinit && bashcompinit
 source "$HOME/Developer/private-mac-preferences/square-zshrc"
 source "$HOME/Developer/private-mac-preferences/personal-proj-zshrc"
 
-# >>> conda initialize >>>
-# !! Contents within this block are managed by 'conda init' !!
-__conda_setup="$('/opt/homebrew/Caskroom/mambaforge/base/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
-if [ $? -eq 0 ]; then
-    eval "$__conda_setup"
-else
-    if [ -f "/opt/homebrew/Caskroom/mambaforge/base/etc/profile.d/conda.sh" ]; then
-        . "/opt/homebrew/Caskroom/mambaforge/base/etc/profile.d/conda.sh"
-    else
-        export PATH="/opt/homebrew/Caskroom/mambaforge/base/bin:$PATH"
-    fi
-fi
-unset __conda_setup
-# <<< conda initialize <<<
-
-
-# bun completions
-[ -s "/Users/sethfri/.bun/_bun" ] && source "/Users/sethfri/.bun/_bun"
-
-# bun
-export BUN_INSTALL="$HOME/.bun"
-export PATH="$BUN_INSTALL/bin:$PATH"
 export PATH="$HOME/.local/bin:$PATH"
