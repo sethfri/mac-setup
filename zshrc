@@ -202,9 +202,10 @@ bindkey "^[[A" history-beginning-search-backward-end
 bindkey "^[[B" history-beginning-search-forward-end
 
 source "$HOME/Developer/mac-setup/config/zsh/colors.zsh"
-source "$HOME/Developer/mac-setup/config/zsh/prompt.zsh"
 source "$HOME/Developer/mac-setup/config/zsh/history.zsh"
 source "$HOME/Developer/mac-setup/config/zsh/completion/completion.zsh"
+
+eval "$(starship init zsh)"
 
 # Completion
 
