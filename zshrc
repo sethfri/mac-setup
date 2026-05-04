@@ -163,6 +163,8 @@ alias gb='./gradlew build'
 # Claude
 alias opus='claude --model opus'
 alias sonnet='claude --model sonnet'
+alias cl='claude'
+alias cc='claude -c'
 
 # Helpers
 alias symbolicate="/Applications/Xcode.app/Contents/SharedFrameworks/DVTFoundation.framework/Versions/A/Resources/symbolicatecrash -v"
