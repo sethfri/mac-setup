@@ -6,6 +6,11 @@ add_newline = false
 [line_break]
 disabled = true
 
+# Git
+[git_branch]
+format = 'on [$branch]($style) '
+
+# Languages
 [bun]
 disabled = true
 
