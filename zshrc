@@ -50,6 +50,9 @@ alias grh='git reset HEAD~1'
 alias grst='git restore'
 alias gwtr='git worktree remove'
 
+# GitHub
+alias gas='gh auth switch'
+
 alias python='python3'
 
 function gr() { git rebase -i --autosquash HEAD~$1; }
