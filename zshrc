@@ -27,7 +27,7 @@ alias gcmm='git commit -m'
 alias gcmam='git commit -am'
 alias gcma='git commit -a'
 alias gsa='git stash apply'
-alias gcp='git cherry-pick'
+function gcp() { git cherry-pick "$@"; }
 function gco() { git checkout "$@"; }
 alias gbr='git branch'
 alias gcos='git checkout $(git branch | fzf)'
@@ -43,7 +43,7 @@ alias gd='git diff'
 alias ga='git apply -3 -p3'
 alias gcmamd='git commit --amend'
 alias grl='git reflog'
-alias grb='git rebase'
+function grb() { git rebase "$@"; }
 alias grba='git rebase --abort'
 alias grhh='git reset --hard HEAD~1'
 alias grh='git reset HEAD~1'
@@ -217,12 +217,12 @@ eval "$(starship init zsh)"
 autoload -Uz compinit && compinit
 autoload -U bashcompinit && bashcompinit
 
-_gco() {
+_git_local_branches() {
   local -a branches
   branches=(${(f)"$(git for-each-ref --format='%(refname:short)' refs/heads 2>/dev/null)"})
   compadd $branches
 }
-compdef _gco gco
+compdef _git_local_branches gco grb gcp
 
 # Source Private Zsh
 
