@@ -1,3 +1,6 @@
+: ${ZSHDIR:=$HOME/.zsh}
+mkdir -p "$ZSHDIR/cache"
+
 ## completion system
   zstyle ':completion:*:approximate:'    max-errors 'reply=( $((($#PREFIX+$#SUFFIX)/3 )) numeric )' # allow one error for every three characters typed in approximate completer
   zstyle ':completion:*:complete:-command-::commands' ignored-patterns '*\~' # don't complete backup files as executables

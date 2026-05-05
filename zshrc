@@ -28,7 +28,7 @@ alias gcmam='git commit -am'
 alias gcma='git commit -a'
 alias gsa='git stash apply'
 alias gcp='git cherry-pick'
-alias gco='git checkout'
+function gco() { git checkout "$@"; }
 alias gbr='git branch'
 alias gcos='git checkout $(git branch | fzf)'
 alias gpush='git push'
@@ -216,6 +216,13 @@ eval "$(starship init zsh)"
 
 autoload -Uz compinit && compinit
 autoload -U bashcompinit && bashcompinit
+
+_gco() {
+  local -a branches
+  branches=(${(f)"$(git for-each-ref --format='%(refname:short)' refs/heads 2>/dev/null)"})
+  compadd $branches
+}
+compdef _gco gco
 
 # Source Private Zsh
 
