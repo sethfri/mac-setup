@@ -23,3 +23,7 @@ export LSCOLORS=gxfxcxdxbxegedabagacad
 # color grep
 export GREP_OPTIONS='--color=auto'
 GREP_COLOR='1;32'
+
+# Make ANSI blue (color 4) readable on dark backgrounds
+# Claude Code uses this color for keywords (e.g. const, await, null)
+printf '\033]4;4;#88bbff\a'
