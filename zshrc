@@ -211,6 +211,7 @@ source "$HOME/Developer/mac-setup/config/zsh/history.zsh"
 source "$HOME/Developer/mac-setup/config/zsh/completion/completion.zsh"
 
 eval "$(starship init zsh)"
+eval "$(mise activate zsh)"
 
 # Completion
 
