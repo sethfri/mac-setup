@@ -11,7 +11,7 @@
         "hooks": [
           {
             "type": "command",
-            "command": "IFS= read -r input; [[ \"$input\" == *grep* ]] && echo '{\"hookSpecificOutput\":{\"hookEventName\":\"PreToolUse\",\"permissionDecision\":\"deny\",\"permissionDecisionReason\":\"Use rg (ripgrep) instead of grep -- see ~/.claude/CLAUDE.md\"}}'"
+            "command": "rg -q grep && echo '{\"hookSpecificOutput\":{\"hookEventName\":\"PreToolUse\",\"permissionDecision\":\"deny\",\"permissionDecisionReason\":\"Use rg (ripgrep) instead of grep -- see ~/.claude/CLAUDE.md\"}}' || true"
           }
         ]
       }
