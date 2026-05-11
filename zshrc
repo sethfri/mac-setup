@@ -52,6 +52,7 @@ alias gwtr='git worktree remove'
 
 # GitHub
 alias gas='gh auth switch'
+alias gaspush='gas && gpush && gas'
 
 alias python='python3'
 
