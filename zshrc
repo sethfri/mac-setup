@@ -226,7 +226,7 @@ _git_local_branches() {
   branches=(${(f)"$(git for-each-ref --format='%(refname:short)' refs/heads 2>/dev/null)"})
   compadd $branches
 }
-compdef _git_local_branches gco grb gcp
+compdef _git_local_branches gco grb gcp gro
 
 # Source Private Zsh
 
