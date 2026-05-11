@@ -171,7 +171,7 @@ alias cc='claude -c'
 
 # Helpers
 alias symbolicate="/Applications/Xcode.app/Contents/SharedFrameworks/DVTFoundation.framework/Versions/A/Resources/symbolicatecrash -v"
-alias dorig='find . -iname \*.orig -delete'
+alias dorig='fd -e orig -tf -X rm'
 alias ddd="rm -rf $HOME/Library/Developer/Xcode/DerivedData"
 alias vs='open -a "Visual Studio Code" "$1"'
 alias sz='source ~/.zshrc'

@@ -9,6 +9,7 @@ cask 'visual-studio-code'
 cask 'font-meslo-lg-nerd-font'
 
 brew 'fzf'
+brew 'fd'
 brew 'gh'
 brew 'graphviz'
 brew 'ripgrep'
