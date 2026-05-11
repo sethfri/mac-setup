@@ -29,7 +29,7 @@ alias gcma='git commit -a'
 alias gsa='git stash apply'
 function gcp() { git cherry-pick "$@"; }
 function gco() { git checkout "$@"; }
-alias gbr='git branch'
+function gbr() { git branch "$@"; }
 alias gcos='git checkout $(git branch | fzf)'
 alias gpush='git push'
 alias gpusht='git push --tags'
@@ -227,7 +227,7 @@ _git_local_branches() {
   branches=(${(f)"$(git for-each-ref --format='%(refname:short)' refs/heads 2>/dev/null)"})
   compadd $branches
 }
-compdef _git_local_branches gco grb gcp gro
+compdef _git_local_branches gco grb gcp gro gbr
 
 # Source Private Zsh
 
