@@ -49,6 +49,7 @@ alias grhh='git reset --hard HEAD~1'
 alias grh='git reset HEAD~1'
 alias grst='git restore'
 alias gwtr='git worktree remove'
+alias gg='git log -p -G'
 
 # GitHub
 alias gas='gh auth switch'
