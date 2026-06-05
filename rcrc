@@ -1,1 +1,1 @@
-EXCLUDES="README.md Brewfile setup LICENSE"
+EXCLUDES="README.md Brewfile setup LICENSE config.ghostty"
