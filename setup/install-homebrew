@@ -11,8 +11,5 @@ else
   echo "Homebrew already installed"
 fi
 
-echo "Installing brew bundle"
-brew tap Homebrew/bundle
-
 echo "Installing Homebrew dependencies"
 brew bundle
