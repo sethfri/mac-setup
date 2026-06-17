@@ -234,5 +234,6 @@ compdef _git_local_branches gco grb gcp gro gbr
 
 source "$HOME/Developer/private-mac-preferences/square-zshrc"
 source "$HOME/Developer/private-mac-preferences/personal-proj-zshrc"
+source "$HOME/Developer/private-mac-preferences/cape-zshrc"
 
 export PATH="$HOME/.local/bin:$PATH"
