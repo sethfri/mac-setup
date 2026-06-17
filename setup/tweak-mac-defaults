@@ -10,6 +10,7 @@ setup/echo-banner "Tweaking Mac defaults"
 defaults write com.apple.controlcenter 'NSStatusItem Visible Bluetooth' -bool true
 
 # Reduce motion
+defaults write com.apple.universalaccess reduceMotion -bool true
 defaults write com.apple.Accessibility ReduceMotionEnabled -bool true
 
 ############
@@ -25,16 +26,10 @@ defaults write -g com.apple.scrollwheel.scaling 1
 defaults write -g com.apple.trackpad.scaling 2
 
 # Speed up the key repeat
-defaults write -g KeyRepeat 2
+defaults write -g KeyRepeat -int 2
 
 # Speed up the initial key repeat wait
-defaults write -g InitialKeyRepeat 15
-
-# Speed up the key repeat delay
-defaults write com.apple.Accessibility KeyRepeatDelay 0.25
-
-# Speed up the key repeat interval
-defaults write com.apple.Accessibility KeyRepeatInterval 0.03333333299999999
+defaults write -g InitialKeyRepeat -int 10
 
 ##########
 # Finder #
