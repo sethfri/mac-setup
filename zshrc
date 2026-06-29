@@ -55,6 +55,9 @@ alias gg='git log -p -G'
 alias gas='gh auth switch'
 alias gaspush='gas && gpush && gas'
 
+# iOS
+alias xgen='xcodegen'
+
 alias python='python3'
 
 function gr() { git rebase -i --autosquash HEAD~$1; }
