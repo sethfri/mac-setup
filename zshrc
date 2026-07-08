@@ -169,6 +169,7 @@ alias grad='./gradlew'
 alias gb='./gradlew build'
 
 # Claude
+alias fable='claude --model fable'
 alias opus='claude --model opus'
 alias sonnet='claude --model sonnet'
 alias cc='claude'
