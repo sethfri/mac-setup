@@ -26,7 +26,7 @@ alias gcm='git commit -v'
 alias gcmm='git commit -m'
 alias gcmam='git commit -am'
 alias gcma='git commit -a'
-alias gsa='git stash apply'
+alias gsta='git stash apply'
 function gcp() { git cherry-pick "$@"; }
 function gco() { git checkout "$@"; }
 function gbr() { git branch "$@"; }
@@ -54,6 +54,10 @@ alias gg='git log -p -G'
 # GitHub
 alias gas='gh auth switch'
 alias gaspush='gas && gpush && gas'
+alias gsi='gh stack init'
+function gsa() { gh stack add "$@"; }
+alias gsp='gh stack push'
+alias gss='gh stack submit'
 
 # iOS
 alias xgen='xcodegen'
@@ -232,7 +236,7 @@ _git_local_branches() {
   branches=(${(f)"$(git for-each-ref --format='%(refname:short)' refs/heads 2>/dev/null)"})
   compadd $branches
 }
-compdef _git_local_branches gco grb gcp gro gbr
+compdef _git_local_branches gco grb gcp gro gbr gsa
 
 # Source Private Zsh
 
