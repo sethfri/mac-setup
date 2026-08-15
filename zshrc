@@ -72,7 +72,7 @@ function gro() {
     NUM_COMMITS=1
   fi
 
-  git rebase --onto "$NEW_BASE" "$BRANCH"~"$NUM_COMMITS" "$BRANCH"
+  git rebase --update-refs --onto "$NEW_BASE" "$BRANCH"~"$NUM_COMMITS" "$BRANCH"
 }
 
 function gwt() {
