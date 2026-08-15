@@ -54,7 +54,7 @@ alias gg='git log -p -G'
 # GitHub
 alias gas='gh auth switch'
 alias gaspush='gas && gpush && gas'
-alias gsi='gh stack init'
+function gsi() { gh stack init "$@"; }
 function gsa() { gh stack add "$@"; }
 alias gsp='gh stack push'
 alias gss='gh stack submit'
@@ -205,7 +205,7 @@ _git_local_branches() {
   branches=(${(f)"$(git for-each-ref --format='%(refname:short)' refs/heads 2>/dev/null)"})
   compadd $branches
 }
-compdef _git_local_branches gco grb gcp gro gbr gsa
+compdef _git_local_branches gco grb gcp gro gbr gsi gsa
 
 # Source Private Zsh
 
