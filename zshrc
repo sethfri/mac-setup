@@ -60,6 +60,7 @@ alias gsp='gh stack push'
 alias gssub='gh stack submit'
 alias gss='gh stack sync --prune'
 function gsrb() { gh stack rebase "$@"; }
+alias gsv='gh stack view'
 
 # iOS
 alias xgen='xcodegen'
