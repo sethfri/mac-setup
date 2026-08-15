@@ -137,37 +137,6 @@ function gitfile() {
 alias be='bundle exec'
 alias mine='open -a RubyMine'
 
-# CocoaPods
-alias pu='bundle exec pod update --repo-update'
-alias nuke='rm -rf Pods/ && git clean -fff -dddd -x && dxdd && pod repo update && pik'
-
-# Do a pod install without killing Xcode
-function pi() {
-  set -o pipefail
-
-  POD_INSTALL_RESULT=$(bundle exec pod --ansi install "$@" | tee /dev/tty)
-
-  if [[ $POD_INSTALL_RESULT == *"[!] CocoaPods could not find compatible versions for pod"* ]] \
-    || [[ $POD_INSTALL_RESULT == *"[!] Unable to find a specification for"* ]]; then
-    bundle exec pod install --repo-update "$@"
-  fi
-
-  if [[ $? -ne 0 ]]; then
-    return 1
-  fi
-}
-
-# Kill Xcode and then pod install
-function pik() {
-  pkill Xcode
-
-  pi "$@"
-}
-
-function pio() {
-  pik "$@" && xed .
-}
-
 # Backend
 alias grad='./gradlew'
 alias gb='./gradlew build'
