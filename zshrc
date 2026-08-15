@@ -57,7 +57,9 @@ alias gaspush='gas && gpush && gas'
 function gsi() { gh stack init "$@"; }
 function gsa() { gh stack add "$@"; }
 alias gsp='gh stack push'
-alias gss='gh stack submit'
+alias gssub='gh stack submit'
+alias gss='gh stack sync --prune'
+function gsrb() { gh stack rebase "$@"; }
 
 # iOS
 alias xgen='xcodegen'
