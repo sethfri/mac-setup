@@ -1,1 +1,1 @@
-EXCLUDES="README.md Brewfile setup LICENSE config.ghostty"
+EXCLUDES="README.md Brewfile setup LICENSE config.ghostty jetbrains-xcode-keymap.xml jetbrains-keymap-setting.xml"

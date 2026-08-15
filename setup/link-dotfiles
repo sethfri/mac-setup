@@ -6,4 +6,11 @@ setup/echo-banner "Linking dotfiles"
 
 RCRC=rcrc rcup -v -d .
 
-ln -sf "$(pwd)/config.ghostty" "$HOME/Library/Application Support/com.mitchellh.ghostty/config.ghostty"
+ln -sf "$(pwd)/config.ghostty" "$HOME/Library/Application Support/com.mitchellh.ghostty/config.ghostty" || true
+
+for dir in "$HOME/Library/Application Support/JetBrains"/* "$HOME/Library/Application Support/Google/AndroidStudio"*; do
+  [ -d "$dir" ] || continue
+  mkdir -p "$dir/keymaps"
+  ln -sf "$(pwd)/jetbrains-xcode-keymap.xml" "$dir/keymaps/Xcode.xml"
+  ln -sf "$(pwd)/jetbrains-keymap-setting.xml" "$dir/options/mac/keymap.xml"
+done
